@@ -1,0 +1,163 @@
+
+
+
+
+.team-section {
+  width: min(92%, 1250px);
+  margin: clamp(80px, 10vw, 145px) auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: clamp(40px, 8vw, 100px);
+}
+
+.team-intro h2 {
+  max-width: 650px;
+  margin: 0;
+  color: white;
+  font-size: clamp(38px, 4.5vw, 64px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+}
+
+.team-intro h2 strong {
+  color: #60a5fa;
+}
+
+.team-intro > p {
+  max-width: 570px;
+  margin-top: 25px;
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.team-values {
+  margin-top: 35px;
+  border-top: 1px solid #ffffff20;
+}
+
+.team-values div {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 17px 0;
+  border-bottom: 1px solid #ffffff20;
+}
+
+.team-values span {
+  color: #60a5fa;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.team-values p {
+  margin: 0;
+  color: #e2e8f0;
+  font-size: 14px;
+}
+
+.team-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 470px;
+  overflow: hidden;
+  border: 1px solid #60a5fa30;
+  border-radius: 48% 48% 24px 24px;
+  background:
+    radial-gradient(ellipse at 50% 40%, #1d4ed855, transparent 55%),
+    linear-gradient(145deg, #101e38, #020617);
+}
+
+.team-orbit {
+  position: absolute;
+  width: 72%;
+  aspect-ratio: 1;
+  border: 1px solid #93c5fd35;
+  border-radius: 50%;
+  animation: teamOrbit 18s linear infinite;
+}
+
+.orbit-two {
+  width: 52%;
+  border-color: #60a5fa50;
+  animation-direction: reverse;
+  animation-duration: 13s;
+}
+
+.team-glass-icon {
+  display: grid;
+  place-items: center;
+  width: 150px;
+  aspect-ratio: 1;
+  border: 1px solid #93c5fd45;
+  border-radius: 50%;
+  background: #0f2344bb;
+  box-shadow: 0 0 80px #2563eb35;
+  font-size: clamp(55px, 7vw, 85px);
+}
+
+.team-side-label {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  writing-mode: vertical-rl;
+  color: #93c5fd;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.team-visual-caption {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  left: 25px;
+  padding: 18px;
+  border: 1px solid #ffffff18;
+  border-radius: 14px;
+  background: #020617a8;
+  backdrop-filter: blur(12px);
+}
+
+.team-visual-caption span {
+  color: #60a5fa;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.team-visual-caption p {
+  margin: 8px 0 0;
+  color: white;
+  font-size: 14px;
+}
+
+@keyframes teamOrbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 850px) {
+  .team-section {
+    grid-template-columns: 1fr;
+  }
+
+  .team-visual {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-visual {
+    min-height: 340px;
+  }
+
+  .team-glass-icon {
+    width: 110px;
+  }
+
+  .team-intro h2 {
+    font-size: 39px;
+  }
+}
